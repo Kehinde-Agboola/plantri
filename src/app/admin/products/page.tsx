@@ -1,4 +1,4 @@
-import db from "@/app/components/db/db";
+import db from "@/db/db";
 import { PageHeader } from "../_components/PageHeader";
 import { Button } from "@/components/ui/button";
 import {
@@ -82,7 +82,7 @@ async function ProductsTable() {
               )}
             </TableCell>
             <TableCell>{product.name}</TableCell>
-            <TableCell>{formatCurrency(product.priceInCents / 100)}</TableCell>
+            <TableCell>{formatCurrency(product.priceInCents)}</TableCell>
             <TableCell>{formatNumber(product._count.orders)}</TableCell>
             <TableCell>
               <DropdownMenu>
